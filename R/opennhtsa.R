@@ -22,7 +22,7 @@ NULL
 #'               model_year("2010") %>%
 #'               vehicle_make("ford") %>%
 #'               vehicle_model("f-150") %>%
-#'               nhsta_fetch()
+#'               nhtsa_fetch()
 #' }
 #'
 #' @aliases chain_query
@@ -33,7 +33,7 @@ NULL
 
 api_url <- function()  { "http://www.nhtsa.gov/webapi/api" }
 
-#' @title Choose the NHSTA facility
+#' @title Choose the NHTSA facility
 #'
 #' @return data.frame
 #' @export
@@ -82,7 +82,7 @@ response_format <- function(q, type = "json")  {
 #'
 #' @return data.frame
 #' @export
-nhsta_fetch <- function(url, debug=FALSE) {
+nhtsa_fetch <- function(url, debug=FALSE) {
   # This function is verbatim copied from:
   # https://github.com/rOpenHealth/openfda/blob/master/R/openfda.R
 
@@ -94,7 +94,7 @@ nhsta_fetch <- function(url, debug=FALSE) {
   # The API servers return 404 for empty search results, so
   # distinguish that case from 'real' errors.
   if (result$status_code == 404) {
-    warning('Received 404 response from NHSTA servers.\n',
+    warning('Received 404 response from NHTSA servers.\n',
             'Interpreting as an empty result set.')
     return(data.frame(results=c()));
   }
@@ -104,9 +104,9 @@ nhsta_fetch <- function(url, debug=FALSE) {
   fromJSON(httr::content(result, as='text'))$Results
 }
 
-#' openNHSTA: A package for interfacing with the U.S. Department of Transportation's National Highway Traffic Safety Administration API
+#' openNHTSA: A package for interfacing with the U.S. Department of Transportation's National Highway Traffic Safety Administration API
 #'
-#' This package provides a simple wrapper around the NHSTA API (http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83).
+#' This package provides a simple wrapper around the NHTSA API (http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83).
 #' Credit for the design and architecture of the wrapper should go to the authors of the openfda wrapper housed here: https://github.com/rOpenHealth/openfda/
 #' Many parts of this wrapper are direct copies of their work and hence this package is released under license GPL v2.
 #'
@@ -120,15 +120,15 @@ nhsta_fetch <- function(url, debug=FALSE) {
 #'   model_year("2010") %>%
 #'   vehicle_make("ford") %>%
 #'   vehicle_model("fusion") %>%
-#'   nhsta_fetch()
+#'   nhtsa_fetch()
 #'
 #' facility("complaints") %>%
 #'   model_year("2010") %>%
 #'   vehicle_make("ford") %>%
 #'   vehicle_model("fusion") %>%
-#'   nhsta_fetch()
+#'   nhtsa_fetch()
 #' }
 #'
 #' @docType package
-#' @name openNHSTA
+#' @name openNHTSA
 NULL

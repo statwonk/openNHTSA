@@ -17,7 +17,7 @@ Once devtools is installed, you can grab this package:
 
 ```R
 library("devtools")
-devtools::install_github("statwonk/openNHSTA")
+devtools::install_github("statwonk/openNHTSA")
 ```
 
 Load it in like any other package:
@@ -36,7 +36,7 @@ opts_knit$set(upload.fun = imgur_upload, base.url = NULL)
 
 ```{r}
 complaints <- facility("complaints") %>%
-  nhsta_fetch()
+  nhtsa_fetch()
 
 head(complaints, 5)
 ```
@@ -44,7 +44,7 @@ head(complaints, 5)
 ```{r}
 complaints_2010 <- facility("complaints") %>%
   model_year("2010") %>%
-  nhsta_fetch()
+  nhtsa_fetch()
 
 head(complaints_2010, 5)
 ```
@@ -53,7 +53,7 @@ head(complaints_2010, 5)
 ford_2010_complaints <- facility("complaints") %>%
     model_year("2010") %>%
     vehicle_make("ford") %>%
-    nhsta_fetch()
+    nhtsa_fetch()
 
 head(ford_2010_complaints, 5)
 ```
@@ -64,7 +64,7 @@ ford_fusion_2010_complaints <- facility("complaints") %>%
     model_year("2010") %>%
     vehicle_make("ford") %>%
     vehicle_model("fusion") %>%
-    nhsta_fetch()
+    nhtsa_fetch()
 
 str(ford_fusion_2010_complaints)
 ```
