@@ -28,6 +28,10 @@ library("openNHTSA")
 
 ## Examples
 
+The wrapper currently supports two facilities: [`complaints`](http://www.nhtsa.gov/webapi/Default.aspx?Complaints/Metadata/81) and [`recalls`](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/Metadata/83). Here's an rmarkdown document showing [how results of the examples should look](https://github.com/statwonk/openNHTSA/blob/master/README.Rmd).
+
+Complaints are reports filed by vehicle owners with the NHTSA.
+
 ```{r}
 complaints <- facility("complaints") %>%
   nhtsa_fetch()
