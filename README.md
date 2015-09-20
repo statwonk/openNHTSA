@@ -24,15 +24,9 @@ Load it in like any other package:
 
 ```{r}
 library("openNHTSA")
-library("magrittr")
 ```
 
 ## Examples
-
-```{r, echo=FALSE, results='hide'}
-library("knitr")
-opts_knit$set(upload.fun = imgur_upload, base.url = NULL)
-```
 
 ```{r}
 complaints <- facility("complaints") %>%
