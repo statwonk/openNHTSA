@@ -1,4 +1,4 @@
-library("openNHSTA")
+library("openNHTSA")
 
 context("query-builder")
 test_that("build facility query", {

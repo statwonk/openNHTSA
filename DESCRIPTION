@@ -1,10 +1,10 @@
-Package: openNHSTA
-Title: R interface to the NHSTA API
+Package: openNHTSA
+Title: R interface to the USDOT National Highway Traffic Safety Administration API
 Version: 0.1.9000
 Authors@R:
     person("Christopher", "Peters", email = "cpeter9@gmail.com", role = c("aut", "cre"))
 Maintainer: Christopher Peters <cpeter9@gmail.com>
-Description: Provides a simplified interface to the NHSTA API from R.
+Description: Provides a simplified interface to the NHTSA API from R.
 URL: https://github.com/statwonk/opennhstsa
 BugReports: https://github.com/statwonk/opennhtsa/issues
 Depends:

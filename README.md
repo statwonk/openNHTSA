@@ -1,7 +1,7 @@
-# openNHSTA
-## Convenient access to the [NHSTA WebAPIs](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
+# openNHTSA
+## Convenient access to the [NHTSA WebAPIs](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
 
-This package provides some simple helpers for accessing the U.S. Department of Transportation's [National Highway Traffic Safety Administration API](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83) 
+This package provides some simple helpers for accessing the U.S. Department of Transportation's [National Highway Traffic Safety Administration API](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
 from R.  It uses the `jsonlite` and `magrittr` packages to provide a simple way to convert from National Highway Traffic Safety Administration queries to R dataframes suitable for quick analysis and plotting.
 
 ## Installation
@@ -23,7 +23,7 @@ devtools::install_github("statwonk/openNHTSA")
 Load it in like any other package:
 
 ```{r}
-library("openNHSTA")
+library("openNHTSA")
 library("magrittr")
 ```
 

@@ -23,7 +23,7 @@ my_query <- facility("recalls") \%>\%
               model_year("2010") \%>\%
               vehicle_make("ford") \%>\%
               vehicle_model("f-150") \%>\%
-              nhsta_fetch()
+              nhtsa_fetch()
 }
 }
 

@@ -1,7 +1,7 @@
-# openNHSTA
-## Convenient access to the [NHSTA WebAPIs](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
+# openNHTSA
+## Convenient access to the [NHTSA WebAPIs](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
 
-This package provides some simple helpers for accessing the U.S. Department of Transportation's [National Highway Traffic Safety Administration API](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83) 
+This package provides some simple helpers for accessing the U.S. Department of Transportation's [National Highway Traffic Safety Administration API](http://www.nhtsa.gov/webapi/Default.aspx?Recalls/API/83)
 from R.  It uses the `jsonlite` and `magrittr` packages to provide a simple way to convert from National Highway Traffic Safety Administration queries to R dataframes suitable for quick analysis and plotting.
 
 ## Installation
@@ -17,13 +17,13 @@ Once devtools is installed, you can grab this package:
 
 ```R
 library("devtools")
-devtools::install_github("statwonk/openNHSTA")
+devtools::install_github("statwonk/openNHTSA")
 ```
 
 Load it in like any other package:
 
 ```{r}
-library("openNHSTA")
+library("openNHTSA")
 library("magrittr")
 ```
 
@@ -36,7 +36,7 @@ opts_knit$set(upload.fun = imgur_upload, base.url = NULL)
 
 ```{r}
 complaints <- facility("complaints") %>%
-  nhsta_fetch()
+  nhtsa_fetch()
 
 head(complaints, 5)
 ```
@@ -44,7 +44,7 @@ head(complaints, 5)
 ```{r}
 complaints_2010 <- facility("complaints") %>%
   model_year("2010") %>%
-  nhsta_fetch()
+  nhtsa_fetch()
 
 head(complaints_2010, 5)
 ```
@@ -53,7 +53,7 @@ head(complaints_2010, 5)
 ford_2010_complaints <- facility("complaints") %>%
     model_year("2010") %>%
     vehicle_make("ford") %>%
-    nhsta_fetch()
+    nhtsa_fetch()
 
 head(ford_2010_complaints, 5)
 ```
@@ -64,7 +64,7 @@ ford_fusion_2010_complaints <- facility("complaints") %>%
     model_year("2010") %>%
     vehicle_make("ford") %>%
     vehicle_model("fusion") %>%
-    nhsta_fetch()
+    nhtsa_fetch()
 
 str(ford_fusion_2010_complaints)
 ```

@@ -3,7 +3,7 @@
 export("%>%")
 export(facility)
 export(model_year)
-export(nhsta_fetch)
+export(nhtsa_fetch)
 export(vehicle_make)
 export(vehicle_model)
 importFrom(jsonlite,fromJSON)

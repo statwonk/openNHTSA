@@ -2,7 +2,7 @@
 % Please edit documentation in R/opennhtsa.R
 \name{facility}
 \alias{facility}
-\title{Choose the NHSTA facility}
+\title{Choose the NHTSA facility}
 \usage{
 facility(q)
 }
@@ -10,6 +10,6 @@ facility(q)
 data.frame
 }
 \description{
-Choose the NHSTA facility
+Choose the NHTSA facility
 }
 
