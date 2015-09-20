@@ -70,7 +70,7 @@ head(ford_fusion_2010_complaints$Summary[grepl("power steering", ford_fusion_201
 ```
 
 The NHTSA API, and this wrapper, uses a hierarchical API structure like:
-  -  facility (e.g. "recalls" or "complaints")
+  -  facility (e.g. ["recalls"](http://www.nhtsa.gov/webapi/Default.aspx?Complaints/API/81) or ["complaints"](http://www.nhtsa.gov/webapi/Default.aspx?Complaints/API/81))
   -  model_year (e.g. "2010")
   -  vehicle_make (e.g. "ford")
   -  vehicle_model (e.g. "fusion")
